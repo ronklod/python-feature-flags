@@ -18,23 +18,23 @@ def unleashFT(client):
         print("python flag - stnadard startegy -" +  str(client.is_enabled("python_flag")))
         print("experiment flag - traffic base strategy -" + str(client.is_enabled("experiment_flag")))
 
-def getUser(client):
+def get_user(client):
     if client.is_enabled('new_user_flow'):
-        print(newUser('Rafa Nadal', '35', 'rafa@nadal.com', 'Male', '21' ))
+        print(new_user('Rafa Nadal', '35', 'rafa@nadal.com', 'Male', '21' ))
     else:
         print(user('Rafa Nadal', '35', 'rafa@nadal.com', 'Male'))
 
 def user(name, age, email, gender):
     return 'Name:' + name + ', Age:' + age  + ', Email:' + email + ', Gender:' + gender
 
-def newUser(name, age, email, gender, gs_titles):
+def new_user(name, age, email, gender, gs_titles):
     return 'Name:' + name + ', Age:' + age  + ', Email:' + email + ', Gender:' + gender + ', Grand Slams Titles:' + gs_titles
 
 
 
 def run():
     unleashClient = setupUnleash()
-    getUser(unleashClient);
+    get_user(unleashClient);
     unleashFT(unleashClient)
 
 
